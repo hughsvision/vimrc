@@ -178,3 +178,9 @@ let g:ale_lint_on_enter = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-Mix-Format
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:mix_format_on_save = 1
+
