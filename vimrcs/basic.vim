@@ -33,6 +33,17 @@
 " Sets how many lines of history VIM has to remember
 set history=500
 set number
+set mouse=a
+" prevent auto fold after update the file
+autocmd InsertLeave,WinEnter * setlocal foldmethod=syntax
+autocmd InsertEnter,WinLeave * setlocal foldmethod=manual
+
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
