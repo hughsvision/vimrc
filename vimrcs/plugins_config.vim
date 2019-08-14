@@ -81,7 +81,7 @@ let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
@@ -198,3 +198,18 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:mix_format_on_save = 1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM-racer-rust
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set hidden
+let g:racer_cmd = "/Users/hupeng/.cargo/bin/racer"
+let g:racer_experimental_completer = 1
+let g:racer_insert_paren = 1
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
+let g:rustfmt_autosave = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Markdowm-preview
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
